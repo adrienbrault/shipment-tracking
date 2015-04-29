@@ -23,5 +23,10 @@
             "name": "Adrien Brault",
             "email": "adrien.brault@gmail.com"
         }
-    ]
+    ],
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.1-dev"
+        }
+    }
 }
