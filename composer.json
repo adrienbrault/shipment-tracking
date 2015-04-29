@@ -1,0 +1,27 @@
+{
+    "name": "hautelook/shipment-tracking",
+    "autoload": {
+        "psr-4": {
+            "Hautelook\\ShipmentTracking\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Hautelook\\ShipmentTracking\\Tests\\": "tests/"
+        }
+    },
+    "require": {
+        "php": ">=5.5",
+        "guzzle/guzzle": "~3.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~4.5"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Adrien Brault",
+            "email": "adrien.brault@gmail.com"
+        }
+    ]
+}

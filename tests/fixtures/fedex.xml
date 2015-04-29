@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TrackReply xmlns="http://fedex.com/ws/track/v9" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+    <HighestSeverity>SUCCESS</HighestSeverity>
+    <Notifications>
+        <Severity>SUCCESS</Severity>
+        <Source>trck</Source>
+        <Code>0</Code>
+        <Message>Request was successfully processed.</Message>
+        <LocalizedMessage>Request was successfully processed.</LocalizedMessage>
+    </Notifications>
+    <Version>
+        <ServiceId>trck</ServiceId>
+        <Major>9</Major>
+        <Intermediate>1</Intermediate>
+        <Minor>0</Minor>
+    </Version>
+    <CompletedTrackDetails>
+        <HighestSeverity>SUCCESS</HighestSeverity>
+        <Notifications>
+            <Severity>SUCCESS</Severity>
+            <Source>trck</Source>
+            <Code>0</Code>
+            <Message>Request was successfully processed.</Message>
+            <LocalizedMessage>Request was successfully processed.</LocalizedMessage>
+        </Notifications>
+        <DuplicateWaybill>false</DuplicateWaybill>
+        <MoreData>false</MoreData>
+        <TrackDetailsCount>0</TrackDetailsCount>
+        <TrackDetails>
+            <Notification>
+                <Severity>SUCCESS</Severity>
+                <Source>trck</Source>
+                <Code>0</Code>
+                <Message>Request was successfully processed.</Message>
+                <LocalizedMessage>Request was successfully processed.</LocalizedMessage>
+            </Notification>
+            <TrackingNumber>ABC</TrackingNumber>
+            <TrackingNumberUniqueIdentifier>123~123~FDEG</TrackingNumberUniqueIdentifier>
+            <StatusDetail>
+                <CreationTime>2015-04-17T00:00:00</CreationTime>
+                <Code>DL</Code>
+                <Description>Delivered</Description>
+                <Location>
+                    <StreetLines>XXX</StreetLines>
+                    <City>Richland</City>
+                    <StateOrProvinceCode>WA</StateOrProvinceCode>
+                    <CountryCode>US</CountryCode>
+                    <CountryName>United States</CountryName>
+                    <Residential>false</Residential>
+                </Location>
+                <AncillaryDetails>
+                    <Reason>014</Reason>
+                    <ReasonDescription>Left at front door.Signature Service not requested.</ReasonDescription>
+                </AncillaryDetails>
+            </StatusDetail>
+            <CarrierCode>FDXG</CarrierCode>
+            <OperatingCompanyOrCarrierDescription>FedEx Ground</OperatingCompanyOrCarrierDescription>
+            <OtherIdentifiers>
+                <PackageIdentifier>
+                    <Type>CUSTOMER_REFERENCE</Type>
+                    <Value>123</Value>
+                </PackageIdentifier>
+            </OtherIdentifiers>
+            <OtherIdentifiers>
+                <PackageIdentifier>
+                    <Type>DEPARTMENT</Type>
+                    <Value>123</Value>
+                </PackageIdentifier>
+            </OtherIdentifiers>
+            <OtherIdentifiers>
+                <PackageIdentifier>
+                    <Type>INVOICE</Type>
+                    <Value>123</Value>
+                </PackageIdentifier>
+            </OtherIdentifiers>
+            <OtherIdentifiers>
+                <PackageIdentifier>
+                    <Type>PURCHASE_ORDER</Type>
+                    <Value>123</Value>
+                </PackageIdentifier>
+            </OtherIdentifiers>
+            <OtherIdentifiers>
+                <PackageIdentifier>
+                    <Type>GROUND_SHIPMENT_ID</Type>
+                    <Value>123</Value>
+                </PackageIdentifier>
+            </OtherIdentifiers>
+            <Service>
+                <Type>GROUND_HOME_DELIVERY</Type>
+                <Description>FedEx Home Delivery</Description>
+                <ShortDescription>HD</ShortDescription>
+            </Service>
+            <PackageWeight>
+                <Units>LB</Units>
+                <Value>55.0</Value>
+            </PackageWeight>
+            <PackageDimensions>
+                <Length>52</Length>
+                <Width>33</Width>
+                <Height>10</Height>
+                <Units>IN</Units>
+            </PackageDimensions>
+            <Packaging>Package</Packaging>
+            <PackagingType>YOUR_PACKAGING</PackagingType>
+            <PackageSequenceNumber>1</PackageSequenceNumber>
+            <PackageCount>1</PackageCount>
+            <OriginLocationAddress>
+                <City>CAROL STREAM</City>
+                <StateOrProvinceCode>IL</StateOrProvinceCode>
+                <CountryCode>US</CountryCode>
+                <CountryName>United States</CountryName>
+                <Residential>false</Residential>
+            </OriginLocationAddress>
+            <ShipTimestamp>2015-04-13T00:00:00</ShipTimestamp>
+            <DestinationAddress>
+                <City>Richland</City>
+                <StateOrProvinceCode>WA</StateOrProvinceCode>
+                <CountryCode>US</CountryCode>
+                <CountryName>United States</CountryName>
+                <Residential>false</Residential>
+            </DestinationAddress>
+            <ActualDeliveryTimestamp>2015-04-17T15:08:53-07:00</ActualDeliveryTimestamp>
+            <ActualDeliveryAddress>
+                <City>Richland</City>
+                <StateOrProvinceCode>WA</StateOrProvinceCode>
+                <CountryCode>US</CountryCode>
+                <CountryName>United States</CountryName>
+                <Residential>false</Residential>
+            </ActualDeliveryAddress>
+            <DeliveryAttempts>0</DeliveryAttempts>
+            <DeliverySignatureName>Signature not required</DeliverySignatureName>
+            <TotalUniqueAddressCountInConsolidation>0</TotalUniqueAddressCountInConsolidation>
+            <NotificationEventsAvailable>ON_DELIVERY</NotificationEventsAvailable>
+            <DeliveryOptionEligibilityDetails>
+                <Option>INDIRECT_SIGNATURE_RELEASE</Option>
+                <Eligibility>INELIGIBLE</Eligibility>
+            </DeliveryOptionEligibilityDetails>
+            <DeliveryOptionEligibilityDetails>
+                <Option>REDIRECT_TO_HOLD_AT_LOCATION</Option>
+                <Eligibility>INELIGIBLE</Eligibility>
+            </DeliveryOptionEligibilityDetails>
+            <DeliveryOptionEligibilityDetails>
+                <Option>REROUTE</Option>
+                <Eligibility>INELIGIBLE</Eligibility>
+            </DeliveryOptionEligibilityDetails>
+            <DeliveryOptionEligibilityDetails>
+                <Option>RESCHEDULE</Option>
+                <Eligibility>INELIGIBLE</Eligibility>
+            </DeliveryOptionEligibilityDetails>
+            <Events>
+                <Timestamp>2015-04-17T15:08:53-07:00</Timestamp>
+                <EventType>DL</EventType>
+                <EventDescription>Delivered</EventDescription>
+                <StatusExceptionCode>014</StatusExceptionCode>
+                <StatusExceptionDescription>Left at front door. Signature Service not requested.
+                </StatusExceptionDescription>
+                <Address>
+                    <City>Richland</City>
+                    <StateOrProvinceCode>WA</StateOrProvinceCode>
+                    <PostalCode>99352</PostalCode>
+                    <CountryCode>US</CountryCode>
+                    <CountryName>United States</CountryName>
+                    <Residential>false</Residential>
+                </Address>
+                <ArrivalLocation>DELIVERY_LOCATION</ArrivalLocation>
+            </Events>
+            <Events>
+                <Timestamp>2015-04-17T07:58:00-07:00</Timestamp>
+                <EventType>OD</EventType>
+                <EventDescription>On FedEx vehicle for delivery</EventDescription>
+                <Address>
+                    <City>PASCO</City>
+                    <StateOrProvinceCode>WA</StateOrProvinceCode>
+                    <PostalCode>99301</PostalCode>
+                    <CountryCode>US</CountryCode>
+                    <CountryName>United States</CountryName>
+                    <Residential>false</Residential>
+                </Address>
+                <ArrivalLocation>VEHICLE</ArrivalLocation>
+            </Events>
+            <Events>
+                <Timestamp>2015-04-17T05:07:00-07:00</Timestamp>
+                <EventType>AR</EventType>
+                <EventDescription>At local FedEx facility</EventDescription>
+                <Address>
+                    <City>PASCO</City>
+                    <StateOrProvinceCode>WA</StateOrProvinceCode>
+                    <PostalCode>99301</PostalCode>
+                    <CountryCode>US</CountryCode>
+                    <CountryName>United States</CountryName>
+                    <Residential>false</Residential>
+                </Address>
+                <ArrivalLocation>DESTINATION_FEDEX_FACILITY</ArrivalLocation>
+            </Events>
+            <Events>
+                <Timestamp>2015-04-16T22:32:57-07:00</Timestamp>
+                <EventType>DP</EventType>
+                <EventDescription>Departed FedEx location</EventDescription>
+                <Address>
+                    <City>TROUTDALE</City>
+                    <StateOrProvinceCode>OR</StateOrProvinceCode>
+                    <PostalCode>97060</PostalCode>
+                    <CountryCode>US</CountryCode>
+                    <CountryName>United States</CountryName>
+                    <Residential>false</Residential>
+                </Address>
+                <ArrivalLocation>FEDEX_FACILITY</ArrivalLocation>
+            </Events>
+            <Events>
+                <Timestamp>2015-04-16T15:05:00-07:00</Timestamp>
+                <EventType>AR</EventType>
+                <EventDescription>Arrived at FedEx location</EventDescription>
+                <Address>
+                    <City>TROUTDALE</City>
+                    <StateOrProvinceCode>OR</StateOrProvinceCode>
+                    <PostalCode>97060</PostalCode>
+                    <CountryCode>US</CountryCode>
+                    <CountryName>United States</CountryName>
+                    <Residential>false</Residential>
+                </Address>
+                <ArrivalLocation>FEDEX_FACILITY</ArrivalLocation>
+            </Events>
+            <Events>
+                <Timestamp>2015-04-14T05:31:30-05:00</Timestamp>
+                <EventType>DP</EventType>
+                <EventDescription>Left FedEx origin facility</EventDescription>
+                <Address>
+                    <City>CAROL STREAM</City>
+                    <StateOrProvinceCode>IL</StateOrProvinceCode>
+                    <PostalCode>60188</PostalCode>
+                    <CountryCode>US</CountryCode>
+                    <CountryName>United States</CountryName>
+                    <Residential>false</Residential>
+                </Address>
+                <ArrivalLocation>ORIGIN_FEDEX_FACILITY</ArrivalLocation>
+            </Events>
+            <Events>
+                <Timestamp>2015-04-13T15:34:00-05:00</Timestamp>
+                <EventType>AR</EventType>
+                <EventDescription>Arrived at FedEx location</EventDescription>
+                <Address>
+                    <City>CAROL STREAM</City>
+                    <StateOrProvinceCode>IL</StateOrProvinceCode>
+                    <PostalCode>60188</PostalCode>
+                    <CountryCode>US</CountryCode>
+                    <CountryName>United States</CountryName>
+                    <Residential>false</Residential>
+                </Address>
+                <ArrivalLocation>FEDEX_FACILITY</ArrivalLocation>
+            </Events>
+            <Events>
+                <Timestamp>2015-04-13T13:48:00-05:00</Timestamp>
+                <EventType>PU</EventType>
+                <EventDescription>Picked up</EventDescription>
+                <Address>
+                    <City>CAROL STREAM</City>
+                    <StateOrProvinceCode>IL</StateOrProvinceCode>
+                    <PostalCode>60188</PostalCode>
+                    <CountryCode>US</CountryCode>
+                    <CountryName>United States</CountryName>
+                    <Residential>false</Residential>
+                </Address>
+                <ArrivalLocation>PICKUP_LOCATION</ArrivalLocation>
+            </Events>
+            <Events>
+                <Timestamp>2015-04-09T12:56:00-05:00</Timestamp>
+                <EventType>OC</EventType>
+                <EventDescription>Shipment information sent to FedEx</EventDescription>
+                <Address>
+                    <PostalCode>60106</PostalCode>
+                    <CountryCode>US</CountryCode>
+                    <CountryName>United States</CountryName>
+                    <Residential>false</Residential>
+                </Address>
+                <ArrivalLocation>CUSTOMER</ArrivalLocation>
+            </Events>
+        </TrackDetails>
+    </CompletedTrackDetails>
+</TrackReply>

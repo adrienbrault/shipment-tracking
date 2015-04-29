@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<TrackResponse>
+    <Result>
+        <Success>true</Success>
+        <Packages>
+            <Package>
+                <TrackingNumber>123</TrackingNumber>
+                <LandmarkTrackingNumber>ABC</LandmarkTrackingNumber>
+                <Events>
+                    <Event>
+                        <Status>Item successfully delivered</Status>
+                        <DateTime>2015-04-20 15:10:10</DateTime>
+                        <Location>Toronto, ON</Location>
+                    </Event>
+                </Events>
+            </Package>
+        </Packages>
+    </Result>
+</TrackResponse>

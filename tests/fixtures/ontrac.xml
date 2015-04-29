@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<OnTracShipmentStatus xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                      xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <Packages>
+        <Package>
+            <Events>
+                <Event>
+                    <Status>CL</Status>
+                    <Description>DELIVERED</Description>
+                    <EventTime>2015-04-17T12:09:45</EventTime>
+                    <Facility>SanFrancisco</Facility>
+                    <City>SOUTH SAN FRANCISCO</City>
+                    <State>CA</State>
+                    <Zip>94080</Zip>
+                </Event>
+                <Event>
+                    <Status>RD</Status>
+                    <Description>PACKAGE RECEIVED AT FACILITY</Description>
+                    <EventTime>2015-04-17T07:18:13</EventTime>
+                    <Facility>SanFrancisco</Facility>
+                    <City>SOUTH SAN FRANCISCO</City>
+                    <State>CA</State>
+                    <Zip>94080</Zip>
+                </Event>
+                <Event>
+                    <Status>OD</Status>
+                    <Description>OUT FOR DELIVERY</Description>
+                    <EventTime>2015-04-17T07:14:00</EventTime>
+                    <Facility>SanFrancisco</Facility>
+                    <City>SOUTH SAN FRANCISCO</City>
+                    <State>CA</State>
+                    <Zip>94080</Zip>
+                </Event>
+                <Event>
+                    <Status>RD</Status>
+                    <Description>PACKAGE RECEIVED AT FACILITY</Description>
+                    <EventTime>2015-04-17T06:15:42</EventTime>
+                    <Facility>SanFrancisco</Facility>
+                    <City>SOUTH SAN FRANCISCO</City>
+                    <State>CA</State>
+                    <Zip>94080</Zip>
+                </Event>
+                <Event>
+                    <Status>OS</Status>
+                    <Description>PACKAGE RECEIVED AT FACILITY</Description>
+                    <EventTime>2015-04-16T17:42:08.457</EventTime>
+                    <Facility>Ontario</Facility>
+                    <City>FONTANA</City>
+                    <State>CA</State>
+                    <Zip>92337</Zip>
+                </Event>
+                <Event>
+                    <Status>XX</Status>
+                    <Description>DATA ENTRY</Description>
+                    <EventTime>2015-04-16T12:26:53.43</EventTime>
+                    <Facility>Ontario</Facility>
+                    <City>FONTANA</City>
+                    <State>CA</State>
+                    <Zip>92337</Zip>
+                </Event>
+            </Events>
+            <Tracking>ABC</Tracking>
+            <Exp_Del_Date>2015-04-17T12:10:00</Exp_Del_Date>
+            <ShipDate>2015-04-16T00:00:00</ShipDate>
+            <Delivered>true</Delivered>
+            <Zip>94111</Zip>
+            <Service>C</Service>
+            <POD>front desks mail roo</POD>
+            <Error/>
+        </Package>
+    </Packages>
+    <Note>Results Provided by OnTrac at 4/22/2015 8:24 AM</Note>
+    <Error/>
+</OnTracShipmentStatus>
