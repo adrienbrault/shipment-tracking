@@ -54,11 +54,17 @@ class UspsProvider implements ProviderInterface
     {
 <<<XML
 <TrackFieldRequest USERID="">
+    <Revision>1</Revision>
+    <ClientIp>127.0.0.1</ClientIp>
+    <SourceId>1</SourceId>
     <TrackID ID=""></TrackID>
 </TrackFieldRequest>
 XML;
 
         $xml = new \SimpleXMLElement('<TrackFieldRequest/>');
+        $xml->Revision = 1;
+        $xml->ClientIp = '127.0.0.1';
+        $xml->SourceId = '1';
         $xml->addAttribute('USERID', $this->userId);
         $xml->addChild('TrackID')->addAttribute('ID', $trackingNumber);
 
@@ -86,6 +92,7 @@ XML;
             $city = (string) $trackDetailXml->EventCity;
             $state = (string) $trackDetailXml->EventState;
             $label = (string) $trackDetailXml->Event;
+            $eventCode = (string) $trackDetailXml->EventCode;
 
             $location = null;
             if (strlen($city) > 0 && strlen($state) > 0) {
@@ -96,11 +103,11 @@ XML;
 
             $shipmentEventType = null;
 
-            if (in_array($label, static::getDeliveredEventLabels())) {
+            if (in_array($eventCode, USPS\EventCode::getDeliveredCodes())) {
                 $shipmentEventType = ShipmentEvent::TYPE_DELIVERED;
-            } elseif (in_array($label, static::getReturnedToShipperEventLabels())) {
+            } elseif (in_array($eventCode, USPS\EventCode::getReturnedToShipperCodes())) {
                 $shipmentEventType = ShipmentEvent::TYPE_RETURNED_TO_SHIPPER;
-            } elseif (in_array($label, static::getDeliveryAttemptEventLabels())) {
+            } elseif (in_array($eventCode, USPS\EventCode::getDeliveryAttemptCodes())) {
                 $shipmentEventType = ShipmentEvent::TYPE_DELIVERY_ATTEMPTED;
             }
 
@@ -108,63 +115,5 @@ XML;
         }
 
         return new ShipmentInformation($events);
-    }
-
-    private static function getDeliveredEventLabels()
-    {
-        return [
-            'DELIVERED',
-            'AUTHORIZED AGENT',
-            'DELIVERED BY BROKER',
-            'DELIVERED (WITH SIGNATURE)',
-            'DELIVERED DAMAGED',
-            'DELIVERED ABROAD',
-            'INTERNATIONAL DELIVERED WITH SIGNATURE',
-        ];
-    }
-
-    private static function getReturnedToShipperEventLabels()
-    {
-        return [
-            'REFUSED',
-            'UNDELIVERABLE AS ADDRESSED',
-            'RETURN TO SENDER',
-            'NO SUCH NUMBER',
-            'INSUFFICIENT ADDRESS',
-            'MOVED, LEFT NO ADDRESS',
-            'FORWARD EXPIRED',
-            'ADDRESSEE UNKNOWN',
-            'VACANT',
-            'UNCLAIMED',
-            'RETURN TO SENDER / NOT PICKED UP',
-            'BAD ADDRESS',
-            'FOREIGN RETURN TO SENDER',
-            'R.T.S: IMPROPER DOCUMENTATION',
-            'R.T.S: ABANDONMENT',
-            'R.T.S: DUTY NONPAYMENT',
-            'PICKED UP AT CUSTOMS UNIT',
-            'REFUSED DELIVERY',
-            'REFUSED ENTRY BY CUSTOMS',
-            'RETURNED TO CONSIGNOR',
-        ];
-    }
-
-    private static function getDeliveryAttemptEventLabels()
-    {
-        return [
-            'NOTICE LEFT',
-            'BUSINESS CLOSED',
-            'RECEPTACLE BLOCKED',
-            'RECEPTACLE FULL/ITEM OVERSIZED',
-            'NO SECURE LOCATION AVAILABLE',
-            'NO AUTHORIZED RECIPIENT AVAILABLE',
-            'HAZARDOUS/UNSAFE DELIVERY CONDITIONS',
-            'CLOSED ON ARRIVAL',
-            'CUSTOMER MOVED',
-            'ATTEMPTED DELIVERY ABROAD',
-            'NOT HOME',
-            'NOTICE LEFT (BUSINESS CLOSED)',
-            'NOTICE LEFT (NO AUTHORIZED RECIPIENT AVAILABLE)',
-        ];
     }
 }

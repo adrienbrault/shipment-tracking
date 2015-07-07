@@ -6,6 +6,7 @@ use Guzzle\Http\ClientInterface;
 use Guzzle\Http\Message\RequestInterface;
 use Guzzle\Http\Message\Response;
 use Hautelook\ShipmentTracking\Provider\UspsProvider;
+use Hautelook\ShipmentTracking\ShipmentEvent;
 use Hautelook\ShipmentTracking\ShipmentInformation;
 
 class UspsProviderTest extends \PHPUnit_Framework_TestCase
@@ -18,7 +19,10 @@ class UspsProviderTest extends \PHPUnit_Framework_TestCase
 
         $xml = <<<XML
 <TrackFieldRequest USERID="userId">
-    <TrackID ID="ABC"/>
+    <Revision>1</Revision>
+    <ClientIp>127.0.0.1</ClientIp>
+    <SourceId>1</SourceId>
+    <TrackID ID="9102969010383081813033"/>
 </TrackFieldRequest>
 XML;
         $xml = preg_replace('/\n\s*/', '', $xml);
@@ -44,20 +48,21 @@ XML;
             null,
             $clientProphecy->reveal()
         );
-        $shipmentInformation = $provider->track('ABC');
+        $shipmentInformation = $provider->track('9102969010383081813033');
 
         $this->assertInstanceOf(ShipmentInformation::class, $shipmentInformation);
         $this->assertEquals(
-            new \DateTime('May 21, 2001 12:12 pm'),
+            new \DateTime('March 8, 2012 9:58 am'),
             $shipmentInformation->getDeliveredAt()
         );
         $this->assertSame(null, $shipmentInformation->getEstimatedDeliveryDate());
 
         $events = $shipmentInformation->getEvents();
-        $this->assertCount(3, $events);
+        $this->assertCount(9, $events);
         $event = $events[0];
-        $this->assertEquals(new \DateTime('May 21, 2001 12:12 pm'), $event->getDate());
-        $this->assertEquals('DELIVERED', $event->getLabel());
-        $this->assertEquals('NEWTON, IA', $event->getLocation());
+        $this->assertEquals(new \DateTime('March 8, 2012 9:58 am'), $event->getDate());
+        $this->assertEquals('Delivered', $event->getLabel());
+        $this->assertEquals(ShipmentEvent::TYPE_DELIVERED, $event->getType());
+        $this->assertEquals('BEVERLY HILLS, CA', $event->getLocation());
     }
 }
